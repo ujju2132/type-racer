@@ -159,6 +159,7 @@ const startGameClock = async (gameID) => {
             });
             game = await game.save();
             io.to(gameID).emit("updateGame", game);
+            socket.emit("done");
             clearInterval(timerId);
           } catch (e) {
             console.log(e);
