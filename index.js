@@ -120,6 +120,9 @@ io.on("connection", (socket) => {
     }
   });
 });
+app.route("/check").get((req, res) => {
+  return res.json("YOUR app is working");
+});
 
 const startGameClock = async (gameID) => {
   let game = await Game.findById(gameID);
