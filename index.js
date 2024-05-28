@@ -3,7 +3,7 @@ const express = require("express");
 const http = require("http");
 const mongoose = require("mongoose");
 const getSentence = require("./api/getSentence");
-const Game = require("./models/Game");
+const Game = require("./models/game");
 
 // create a server
 const app = express();
